@@ -9,17 +9,22 @@ import { AppService } from './app.service';
 import { ValueService } from './value.service';
 import { FakeValueService } from './fakevalue.service';
 
-import { BannerComponent } from './banner/banner.component';
+
+import { BannerComponent } from './views/banner/banner.component';
+import { LightSwitchComponent } from './views/light-switch/light-switch.component';
+import { LightSwitchService } from './views/light-switch/light-switch.service';
 
 const allProvides = [
   AppService,
   ValueService,
-  FakeValueService
+  FakeValueService,
+  LightSwitchService
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
+    LightSwitchComponent,
     BannerComponent
   ],
   imports: [
